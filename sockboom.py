@@ -24,7 +24,7 @@ def output(content):
     print(content)
 
 def sign(header):
-    url='https://sockboom.art/auth/login?email='+email+'&passwd='+passwd+''
+    url='https://sockboom.lol/auth/login?email='+email+'&passwd='+passwd+''
     response = requests.post(url=url,headers=header,verify=False)
     sign_message=json.loads(response.text)['msg']
     user=json.loads(response.text)['user']
@@ -38,7 +38,7 @@ def sign(header):
     Cookie=cookie_uid+';'+cookie_email+';'+cookie_key+';'+cookie_ip+';'+cookie_expire_in
     return Cookie
 def user_centre(cookie):   #用户中心
-    url='https://sockboom.art/user'
+    url='https://sockboom.lol/user'
     headers={
     'Cookie':cookie
     }
@@ -60,7 +60,7 @@ def user_centre(cookie):   #用户中心
     output('  [+]可用天数:'+flow[3])
     return headers
 def checkin(headers):
-    url='https://sockboom.art/user/checkin'
+    url='https://sockboom.lol/user/checkin'
     response = requests.post(url=url,headers=headers,verify=False)
     msg=json.loads(response.text)['msg']
     output('  [+]签到信息:'+msg)

@@ -1,2 +1,2 @@
 # sockboom_sign
-https://sockboom.art/
+每天自动续命

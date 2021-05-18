@@ -8,13 +8,14 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 webhook = os.environ["webhook"] # 钉钉机器人的 webhook
+email= os.environ["email"] #邮箱
+passwd= os.environ["passwd"] #密码
 header={
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0',
     'Accept': 'application/json, text/javascript, */*; q=0.01',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
     }
-email= os.environ["email"]
-passwd= os.environ["passwd"]
+
 push= 0      # 1 为钉钉推送 其他为不推送
 global content  #设置一个全局参数存储打印信息，最后好推送
 contents=''
